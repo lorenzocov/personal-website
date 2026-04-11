@@ -1,0 +1,33 @@
+---
+interface Props {
+  current?: 'home' | 'research';
+}
+const { current } = Astro.props;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#F8F7F4]/90 backdrop-blur-sm border-b border-gray-200/70">
+  <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a
+      href="/"
+      class:list={[
+        'font-semibold tracking-tight transition-colors',
+        current === 'home' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900',
+      ]}
+    >
+      Lorenzo Coviello
+    </a>
+    <div class="flex items-center gap-6 text-sm">
+      <a
+        href="/research"
+        class:list={[
+          'transition-colors font-medium',
+          current === 'research'
+            ? 'text-indigo-600'
+            : 'text-gray-500 hover:text-gray-900',
+        ]}
+      >
+        Research
+      </a>
+    </div>
+  </div>
+</nav>

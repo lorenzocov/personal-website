@@ -1,0 +1,96 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+locale: en
+
+collections:
+  - name: profile
+    label: Profile
+    files:
+      - name: profile
+        label: Profile Settings
+        file: src/data/profile.json
+        format: json
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Tagline
+            name: tagline
+            widget: string
+            hint: Short descriptor shown below your name (e.g. "Machine Learning at Google · MIT Media Lab")
+          - label: Bio
+            name: bio
+            widget: text
+            hint: Full bio paragraph shown on the home page
+          - label: Research Statement
+            name: researchStatement
+            widget: text
+            hint: Intro text shown at the top of the Research page
+          - label: Email
+            name: email
+            widget: string
+          - label: LinkedIn URL
+            name: linkedin
+            widget: string
+          - label: Google Scholar URL
+            name: googleScholar
+            widget: string
+          - label: Positions
+            name: positions
+            widget: list
+            summary: "{{fields.role}} · {{fields.organization}}"
+            fields:
+              - label: Role
+                name: role
+                widget: string
+              - label: Organization
+                name: organization
+                widget: string
+              - label: Department
+                name: department
+                widget: string
+                required: false
+
+  - name: publications
+    label: Publications
+    folder: src/content/publications
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{fields.title}} ({{fields.year}})"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Authors
+        name: authors
+        widget: string
+        hint: Full author list, comma-separated
+      - label: Venue
+        name: venue
+        widget: string
+        hint: Journal, conference, or preprint platform (e.g. "PLoS ONE", "NeurIPS", "arXiv")
+      - label: Year
+        name: year
+        widget: number
+        value_type: int
+        min: 1990
+        max: 2100
+      - label: Link
+        name: link
+        widget: string
+        hint: URL to the paper (journal page, arXiv, PDF, etc.)
+      - label: BibTeX
+        name: bibtex
+        widget: text
+        hint: Paste the full BibTeX entry here
+      - label: Abstract
+        name: body
+        widget: text
+        hint: Paper abstract

@@ -1,0 +1,31 @@
+{
+  "name": "Lorenzo Coviello",
+  "tagline": "Machine Learning at Google · MIT Media Lab · UC San Diego",
+  "bio": "I work on the design and development of machine learning infrastructure and modeling techniques for Google Ads, including data analytics and A/B testing. I also covered a Tech Lead role in Google Shopping. Previously, I was a Postdoctoral Associate at the MIT Media Lab. I hold a PhD in Electrical and Computer Engineering from UC San Diego, and MS/BS degrees in Telecommunication Engineering from the University of Padova, Italy.",
+  "researchStatement": "My research spans machine learning systems, computational social science, and social network analysis. Full publication list on Google Scholar.",
+  "email": "lorenzocov@me.com",
+  "linkedin": "https://www.linkedin.com/in/lorenzocoviello/",
+  "googleScholar": "https://scholar.google.com/citations?user=VXLA6xkAAAAJ&hl=en",
+  "positions": [
+    {
+      "role": "Machine Learning Engineer & Tech Lead",
+      "organization": "Google",
+      "department": "Ads & Shopping"
+    },
+    {
+      "role": "Postdoctoral Associate",
+      "organization": "MIT Media Lab",
+      "department": ""
+    },
+    {
+      "role": "PhD, Electrical & Computer Engineering",
+      "organization": "UC San Diego",
+      "department": ""
+    },
+    {
+      "role": "MS/BS, Telecommunication Engineering",
+      "organization": "University of Padova, Italy",
+      "department": ""
+    }
+  ]
+}

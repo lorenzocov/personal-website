@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:scholar.google.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:kevinroose.com)",
+      "Bash(npm install:*)",
+      "Bash(/usr/local/bin/npm install:*)",
+      "Bash(/opt/homebrew/bin/npm install:*)",
+      "Read(//Users/lorenzocoviello/**)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(/opt/homebrew/bin/gh auth:*)"
+    ]
+  }
+}
