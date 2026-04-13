@@ -10,7 +10,14 @@
       "Read(//Users/lorenzocoviello/**)",
       "Bash(git --version)",
       "Bash(gh --version)",
-      "Bash(/opt/homebrew/bin/gh auth:*)"
+      "Bash(/opt/homebrew/bin/gh auth:*)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(gh repo:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

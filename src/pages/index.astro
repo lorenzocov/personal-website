@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm.astro';
 import profile from '../data/profile.json';
 ---
 
@@ -12,30 +13,20 @@ import profile from '../data/profile.json';
 
     <!-- Hero -->
     <section class="pt-10 pb-16">
-      <h1 class="font-serif text-6xl md:text-7xl font-bold text-gray-900 leading-none tracking-tight mb-5">
+      <h1 class="font-serif text-6xl md:text-7xl font-bold text-gray-900 dark:text-[#f0efe8] leading-none tracking-tight mb-5">
         {profile.name}
       </h1>
-      <p class="text-gray-400 text-base font-light tracking-wide max-w-lg">
+      <p class="text-gray-400 dark:text-gray-500 text-base font-light tracking-wide max-w-lg">
         {profile.tagline}
       </p>
 
-      <!-- Contact links -->
+      <!-- Links -->
       <div class="flex flex-wrap gap-3 mt-10">
-        <a
-          href="mailto:"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-600 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-150 shadow-sm"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="m22,7-8.97,5.7a1.94,1.94,0,0,1-2.06,0L2,7" />
-          </svg>
-          Email
-        </a>
         <a
           href={profile.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-600 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-150 shadow-sm"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 dark:border-[#2a2a27] bg-white dark:bg-[#1c1c1a] text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all duration-150 shadow-sm"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -48,7 +39,7 @@ import profile from '../data/profile.json';
           href={profile.googleScholar}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-600 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-150 shadow-sm"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 dark:border-[#2a2a27] bg-white dark:bg-[#1c1c1a] text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all duration-150 shadow-sm"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
@@ -59,30 +50,30 @@ import profile from '../data/profile.json';
       </div>
     </section>
 
-    <div class="h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 mb-16"></div>
+    <div class="h-px bg-gradient-to-r from-gray-200 dark:from-[#2a2a27] via-gray-300 dark:via-[#3a3a37] to-gray-200 dark:to-[#2a2a27] mb-16"></div>
 
     <!-- About -->
     <section class="mb-16">
-      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">About</p>
-      <p class="text-gray-600 leading-relaxed text-[1.05rem] max-w-2xl">
+      <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-5">About</p>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-[1.05rem] max-w-2xl">
         {profile.bio}
       </p>
     </section>
 
     <!-- Background -->
     <section class="mb-16">
-      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Background</p>
+      <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-6">Background</p>
       <div class="space-y-4">
         {
           profile.positions.map((pos) => (
             <div class="flex items-start gap-4 group">
-              <div class="w-1.5 h-1.5 rounded-full bg-indigo-300 mt-[0.45rem] flex-shrink-0 group-hover:bg-indigo-500 transition-colors" />
+              <div class="w-1.5 h-1.5 rounded-full bg-indigo-300 dark:bg-indigo-700 mt-[0.45rem] flex-shrink-0 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-400 transition-colors" />
               <div class="text-sm">
-                <span class="font-medium text-gray-900">{pos.role}</span>
-                <span class="text-gray-300 mx-1.5">·</span>
-                <span class="text-gray-500">{pos.organization}</span>
+                <span class="font-medium text-gray-900 dark:text-[#f0efe8]">{pos.role}</span>
+                <span class="text-gray-300 dark:text-gray-600 mx-1.5">·</span>
+                <span class="text-gray-500 dark:text-gray-400">{pos.organization}</span>
                 {pos.department && (
-                  <span class="text-gray-400">, {pos.department}</span>
+                  <span class="text-gray-400 dark:text-gray-500">, {pos.department}</span>
                 )}
               </div>
             </div>
@@ -90,6 +81,9 @@ import profile from '../data/profile.json';
         }
       </div>
     </section>
+
+    <!-- Contact -->
+    <ContactForm />
 
   </main>
 

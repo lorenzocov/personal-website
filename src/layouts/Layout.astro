@@ -22,8 +22,22 @@ const { title, description = 'Lorenzo Coviello — Machine Learning Researcher' 
     />
     <!-- Netlify Identity for Decap CMS redirect handling -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Dark mode init: runs before paint to avoid flash -->
+    <script is:inline>
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else if (!saved) {
+          const hour = new Date().getHours();
+          if (hour < 7 || hour >= 19) {
+            document.documentElement.classList.add('dark');
+          }
+        }
+      })();
+    </script>
   </head>
-  <body class="bg-[#F8F7F4] text-gray-900 antialiased min-h-screen flex flex-col">
+  <body class="bg-[#F8F7F4] dark:bg-[#111110] text-gray-900 dark:text-[#f0efe8] antialiased min-h-screen flex flex-col transition-colors duration-200">
     <slot />
     <script>
       if (window.netlifyIdentity) {
