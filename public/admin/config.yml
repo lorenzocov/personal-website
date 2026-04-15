@@ -55,6 +55,28 @@ collections:
                 name: department
                 widget: string
                 required: false
+          - label: Teaching
+            name: teaching
+            widget: list
+            summary: "{{fields.course}} · {{fields.term}}"
+            fields:
+              - label: Course
+                name: course
+                widget: string
+              - label: Institution
+                name: institution
+                widget: string
+              - label: Program
+                name: program
+                widget: string
+              - label: Role
+                name: role
+                widget: string
+                hint: e.g. "Co-instructor", "Guest lecturer"
+              - label: Term
+                name: term
+                widget: string
+                hint: e.g. "Fall 2024", "Winter 2025"
 
   - name: publications
     label: Publications

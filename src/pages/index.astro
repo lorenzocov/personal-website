@@ -12,22 +12,7 @@ const publications = allPublications
   .sort((a, b) => b.data.year - a.data.year)
   .map((pub) => ({ ...pub.data, abstract: pub.body.trim() }));
 
-const teaching = [
-  {
-    course: 'Statistics for Decision Making',
-    institution: 'Carnegie Mellon University',
-    program: 'Master of Software Engineering',
-    role: 'Co-instructor',
-    term: 'Fall 2024',
-  },
-  {
-    course: 'Prompt Engineering',
-    institution: 'Carnegie Mellon University',
-    program: 'Master of Software Engineering',
-    role: 'Guest lecturer',
-    term: 'Winter 2025',
-  },
-];
+const teaching = profile.teaching;
 ---
 
 <Layout title="Lorenzo Coviello" description={profile.bio}>

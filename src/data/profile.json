@@ -27,5 +27,21 @@
       "organization": "University of Padova, Italy",
       "department": ""
     }
+  ],
+  "teaching": [
+    {
+      "course": "Statistics for Decision Making",
+      "institution": "Carnegie Mellon University",
+      "program": "Master of Software Engineering",
+      "role": "Co-instructor",
+      "term": "Fall 2024"
+    },
+    {
+      "course": "Prompt Engineering",
+      "institution": "Carnegie Mellon University",
+      "program": "Master of Software Engineering",
+      "role": "Guest lecturer",
+      "term": "Winter 2025"
+    }
   ]
 }
