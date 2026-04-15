@@ -1,6 +1,6 @@
 ---
 interface Props {
-  current?: 'home' | 'research';
+  current?: 'home';
 }
 const { current } = Astro.props;
 ---
@@ -19,17 +19,6 @@ const { current } = Astro.props;
       Lorenzo Coviello
     </a>
     <div class="flex items-center gap-4 text-sm">
-      <a
-        href="/research"
-        class:list={[
-          'transition-colors font-medium',
-          current === 'research'
-            ? 'text-indigo-600 dark:text-indigo-400'
-            : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f0efe8]',
-        ]}
-      >
-        Research
-      </a>
       <!-- Dark mode toggle -->
       <button
         id="theme-toggle"
