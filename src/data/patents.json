@@ -1,0 +1,13 @@
+{
+  "patents": [
+    {
+      "number": "US12456047B2",
+      "title": "Distilling from ensembles to improve reproducibility of neural networks",
+      "inventors": "Gil Shamir, Lorenzo Coviello",
+      "assignee": "Google LLC",
+      "year": 2025,
+      "link": "https://patents.google.com/patent/US12456047B2/en",
+      "description": "Methods to enhance neural network reproducibility via ensemble distillation. The approach trains a single wide neural network that achieves greater accuracy than an ensemble while simultaneously distilling the ensemble's output during training, combining the ensemble's reproducibility benefits with a single model's superior accuracy—without the computational overhead of maintaining multiple networks at inference time."
+    }
+  ]
+}

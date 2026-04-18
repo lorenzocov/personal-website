@@ -4,15 +4,14 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import ContactForm from '../components/ContactForm.astro';
 import PublicationCard from '../components/PublicationCard.astro';
-import { getCollection } from 'astro:content';
+import PatentCard from '../components/PatentCard.astro';
 import profile from '../data/profile.json';
-
-const allPublications = await getCollection('publications');
-const publications = allPublications
-  .sort((a, b) => b.data.year - a.data.year)
-  .map((pub) => ({ ...pub.data, abstract: pub.body.trim() }));
+import publicationsData from '../data/publications.json';
+import patentsData from '../data/patents.json';
 
 const teaching = profile.teaching;
+const publications = publicationsData.papers;
+const patents = patentsData.patents;
 ---
 
 <Layout title="Lorenzo Coviello" description={profile.bio}>
@@ -112,10 +111,10 @@ const teaching = profile.teaching;
       </div>
     </section>
 
-    <!-- Selected Publications -->
+    <!-- Selected Papers -->
     <section class="mb-16">
       <div class="flex items-baseline justify-between mb-6">
-        <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">Selected Publications</p>
+        <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">Selected Papers</p>
         <a
           href={profile.googleScholar}
           target="_blank"
@@ -136,6 +135,26 @@ const teaching = profile.teaching;
               link={pub.link}
               bibtex={pub.bibtex}
               abstract={pub.abstract}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Patents -->
+    <section class="mb-16">
+      <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-6">Patents</p>
+      <div class="space-y-4">
+        {
+          patents.map((patent) => (
+            <PatentCard
+              number={patent.number}
+              title={patent.title}
+              inventors={patent.inventors}
+              assignee={patent.assignee}
+              year={patent.year}
+              link={patent.link}
+              description={patent.description}
             />
           ))
         }

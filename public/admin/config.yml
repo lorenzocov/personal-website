@@ -22,15 +22,15 @@ collections:
           - label: Tagline
             name: tagline
             widget: string
-            hint: Short descriptor shown below your name (e.g. "Machine Learning at Google · MIT Media Lab")
+            hint: Short descriptor shown below your name
           - label: Bio
             name: bio
             widget: text
-            hint: Full bio paragraph shown on the home page
+            hint: Full bio paragraph shown in the About section
           - label: Research Statement
             name: researchStatement
             widget: text
-            hint: Intro text shown at the top of the Research page
+            hint: No longer displayed but kept for reference
           - label: Email
             name: email
             widget: string
@@ -78,41 +78,83 @@ collections:
                 widget: string
                 hint: e.g. "Fall 2024", "Winter 2025"
 
-  - name: publications
-    label: Publications
-    folder: src/content/publications
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: frontmatter
-    summary: "{{fields.title}} ({{fields.year}})"
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Authors
-        name: authors
-        widget: string
-        hint: Full author list, comma-separated
-      - label: Venue
-        name: venue
-        widget: string
-        hint: Journal, conference, or preprint platform (e.g. "PLoS ONE", "NeurIPS", "arXiv")
-      - label: Year
-        name: year
-        widget: number
-        value_type: int
-        min: 1990
-        max: 2100
-      - label: Link
-        name: link
-        widget: string
-        hint: URL to the paper (journal page, arXiv, PDF, etc.)
-      - label: BibTeX
-        name: bibtex
-        widget: text
-        hint: Paste the full BibTeX entry here
-      - label: Abstract
-        name: body
-        widget: text
-        hint: Paper abstract
+  - name: content
+    label: Content
+    files:
+      - name: publications
+        label: Selected Papers
+        file: src/data/publications.json
+        format: json
+        fields:
+          - label: Papers
+            name: papers
+            widget: list
+            summary: "{{fields.title}} ({{fields.year}})"
+            hint: Drag and drop to reorder
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Authors
+                name: authors
+                widget: string
+                hint: Full author list, comma-separated
+              - label: Venue
+                name: venue
+                widget: string
+                hint: e.g. "PLoS ONE", "NeurIPS", "arXiv"
+              - label: Year
+                name: year
+                widget: number
+                value_type: int
+              - label: Link
+                name: link
+                widget: string
+                hint: URL to the paper
+              - label: BibTeX
+                name: bibtex
+                widget: text
+                hint: Paste the full BibTeX entry here
+              - label: Abstract
+                name: abstract
+                widget: text
+
+      - name: patents
+        label: Patents
+        file: src/data/patents.json
+        format: json
+        fields:
+          - label: Patents
+            name: patents
+            widget: list
+            summary: "{{fields.number}} — {{fields.title}}"
+            hint: Drag and drop to reorder
+            fields:
+              - label: Patent Number
+                name: number
+                widget: string
+                hint: e.g. "US12456047B2"
+              - label: Title
+                name: title
+                widget: string
+              - label: Inventors
+                name: inventors
+                widget: string
+                hint: Comma-separated
+              - label: Assignee
+                name: assignee
+                widget: string
+                hint: e.g. "Google LLC"
+              - label: Year
+                name: year
+                widget: number
+                value_type: int
+                hint: Grant year
+              - label: Link
+                name: link
+                widget: string
+                hint: Google Patents URL
+              - label: Description
+                name: description
+                widget: text
+                required: false
