@@ -1,11 +1,5 @@
 {
-  "name": "Lorenzo Coviello",
-  "tagline": "Machine Learning at Google · MIT Media Lab · UC San Diego",
-  "bio": "I work on the design and development of machine learning infrastructure and modeling techniques for Google Ads, including data analytics and A/B testing. I also covered a Tech Lead role in Google Shopping. Previously, I was a Postdoctoral Associate at the MIT Media Lab. I hold a PhD in Electrical and Computer Engineering from UC San Diego, and MS/BS degrees in Telecommunication Engineering from the University of Padova, Italy.",
-  "researchStatement": "My research spans machine learning systems, computational social science, and social network analysis. Full publication list on Google Scholar.",
-  "email": "lorenzocov@me.com",
-  "linkedin": "https://www.linkedin.com/in/lorenzocoviello/",
-  "googleScholar": "https://scholar.google.com/citations?user=VXLA6xkAAAAJ&hl=en",
+  "bio": "I work on the design and development of machine learning infrastructure and modeling techniques for Google Ads, and I have expertise in LLMs, data analytics and A/B testing. Previously, I was a Postdoctoral Associate at the MIT Media Lab. I hold a PhD in Electrical and Computer Engineering from UC San Diego, and MS/BS degrees in Telecommunication Engineering from the University of Padova, Italy.",
   "positions": [
     {
       "role": "Machine Learning Engineer & Tech Lead",
@@ -28,6 +22,8 @@
       "department": ""
     }
   ],
+  "name": "Lorenzo Coviello",
+  "googleScholar": "https://scholar.google.com/citations?user=VXLA6xkAAAAJ&hl=en",
   "teaching": [
     {
       "course": "Statistics for Decision Making",
@@ -43,5 +39,9 @@
       "role": "Guest lecturer",
       "term": "Winter 2025"
     }
-  ]
+  ],
+  "tagline": "Machine Learning at Google · MIT Media Lab · UC San Diego",
+  "researchStatement": "My current research is on machine learning systems. During my PhD and postdoctoral studies, my research was in algorithms and social network analysis. Full publication list on Google Scholar.",
+  "email": "lorenzocov@me.com",
+  "linkedin": "https://www.linkedin.com/in/lorenzocoviello/"
 }
