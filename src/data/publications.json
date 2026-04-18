@@ -1,6 +1,33 @@
 {
   "papers": [
     {
+      "title": "Anti-distillation: Improving reproducibility of deep networks",
+      "authors": "Gil I. Shamir, Lorenzo Coviello",
+      "venue": "arXiv",
+      "year": 2020,
+      "link": "https://arxiv.org/abs/2010.09923",
+      "bibtex": "@article{shamir2020anti,\n  title={Anti-distillation: Improving reproducibility of deep networks},\n  author={Shamir, Gil I and Coviello, Lorenzo},\n  journal={arXiv preprint arXiv:2010.09923},\n  year={2020}\n}",
+      "abstract": "Deep networks have been revolutionary in improving performance of machine learning and artificial intelligence systems. Their high prediction accuracy, however, comes at a price of model irreproducibility in very high levels that do not occur with classical linear models. Two models, even if supposedly identical—with identical architecture, identical trained parameter sets, and trained on the same examples—may predict very differently on individual, previously unseen, examples. Prediction differences may be as large as the order of magnitude of the predictions themselves. Ensembles have been shown to somewhat mitigate this behavior, but may not be utilizing their full potential. In this work, Anti-Distillation is proposed to address irreproducibility in deep networks: ensemble components are forced away from one another by de-correlating their outputs over mini-batches, making them more diverse and the final predictions more reproducible. Empirical results demonstrate substantial prediction-difference reductions on benchmark and real datasets."
+    },
+    {
+      "title": "Smooth activations and reproducibility in deep networks",
+      "authors": "Gil I. Shamir, Dong Lin, Lorenzo Coviello",
+      "venue": "arXiv",
+      "year": 2020,
+      "link": "https://arxiv.org/abs/2010.09931",
+      "bibtex": "@article{shamir2020smooth,\n  title={Smooth activations and reproducibility in deep networks},\n  author={Shamir, Gil I and Lin, Dong and Coviello, Lorenzo},\n  journal={arXiv preprint arXiv:2010.09931},\n  year={2020}\n}",
+      "abstract": "Deep networks are gradually penetrating almost every domain in our lives due to their amazing success. However, with substantive performance accuracy improvements comes the price of irreproducibility: two identical models trained on the exact same dataset may exhibit large differences in predictions on individual examples, especially when trained on highly distributed parallel systems. The popular Rectified Linear Unit (ReLU) activation has been key to recent success of deep networks, but ReLU is also a catalyzer to irreproducibility. We show that activations smoother than ReLU can provide not only better accuracy but also better accuracy-reproducibility tradeoffs. We propose Smooth ReLU (SmeLU), a new family of activations designed to give such better tradeoffs while keeping the mathematical expression simple and implementation cheap. SmeLU is monotonic, mimics ReLU, and provides continuous gradients, yielding better reproducibility. We further show that SmeLU and its generalizations are special cases of a more general methodology of REctified Smooth Continuous Unit (RESCU) activations. Empirical results demonstrate the superior accuracy-reproducibility tradeoffs with smooth activations, SmeLU in particular."
+    },
+    {
+      "title": "A large-scale field experiment to evaluate the effectiveness of paid search advertising",
+      "authors": "Lorenzo Coviello, Uri Gneezy, Lorenz Goette",
+      "venue": "CESifo Working Paper Series",
+      "year": 2017,
+      "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3061698",
+      "bibtex": "@article{coviello2017large,\n  title={A large-scale field experiment to evaluate the effectiveness of paid search advertising},\n  author={Coviello, Lorenzo and Gneezy, Uri and Goette, Lorenz},\n  year={2017},\n  publisher={CESifo Working Paper Series}\n}",
+      "abstract": "Companies spend billions of dollars online for paid links to branded search terms. Measuring the effectiveness of this marketing spending is hard. Blake, Nosko and Tadelis (2015) ran an experiment with eBay, showing that when the company suspended paid search, most of the traffic still ended up on its website. Can findings from one of the largest companies in the world be generalized? We conducted a similar experiment with Edmunds.com, arguably a more representative company, and found starkly different results. More than half of the paid traffic is lost when we shut off paid-links search. These results suggest money spent on search-engine marketing may be more effective than previously documented."
+    },
+    {
       "title": "Detecting Emotional Contagion in Massive Social Networks",
       "authors": "Lorenzo Coviello, Yunkyu Sohn, Adam D.I. Kramer, Cameron Marlow, Massimo Franceschetti, Nicholas A. Christakis, James H. Fowler",
       "venue": "PLoS ONE",
